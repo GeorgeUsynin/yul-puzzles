@@ -12,6 +12,10 @@ contract RevertWithSelector {
             // `revert RevertData()`
             // but in assembly
             // hint: https://www.rareskills.io/post/assembly-revert
+
+            //solution
+            mstore(0, shl(224, 0xa3b7e096)) // shl(x,y) shift left x bits of y value
+            revert(0, 32)
         }
     }
 }

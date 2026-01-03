@@ -7,6 +7,11 @@ contract RevertWithError {
             // revert the function with an error of type `Error(string)`
             // use "RevertRevert" as error message
             // Hint: The error type is a predefined four bytes. See https://www.rareskills.io/post/try-catch-solidity
+            mstore(0, shl(224, 0x08c379a0))
+            mstore(4, 0x20)
+            mstore(36, 12)
+            mstore(68, "RevertRevert")
+            revert(0, 100)
         }
     }
 }
