@@ -10,6 +10,13 @@ contract DoubleOrNothing {
             // return 0.
             // Hint: check if x ≤ 10, which is equivalent to x < 11
 
+            // solution
+            if lt(mul(2, x), 22) {
+                mstore(0, mul(2, x))
+                return(0, 32)
+            }
+            mstore(0, 0)
+            return(0, 32)
         }
     }
 }

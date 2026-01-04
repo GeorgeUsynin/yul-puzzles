@@ -10,6 +10,10 @@ contract Calculator {
         assembly {
             // your code here
             // add x and y
+
+            //solution
+            mstore(0, add(x, y))
+            return(0, 32)
         }
     }
 
@@ -17,6 +21,10 @@ contract Calculator {
         assembly {
             // your code here
             // subtract y from x
+
+            //solution
+            mstore(0, sub(x, y))
+            return(0, 32)
         }
     }
 
@@ -24,6 +32,10 @@ contract Calculator {
         assembly {
             // your code here
             // multiply x by y
+
+            //solution
+            mstore(0, mul(x, y))
+            return(0, 32)
         }
     }
 
@@ -31,6 +43,10 @@ contract Calculator {
         assembly {
             // your code here
             // div x by y
+
+            //solution
+            mstore(0, div(x, y))
+            return(0, 32)
         }
     }
 }
