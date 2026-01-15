@@ -7,6 +7,10 @@ contract CalldataLength {
             // your code here
             // return the length of the calldata
             // hint: calldatasize opcode
+
+            // solution
+            mstore(0x00, calldatasize())
+            return(0, 32)
         }
     }
 }

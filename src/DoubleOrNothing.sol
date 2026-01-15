@@ -15,8 +15,7 @@ contract DoubleOrNothing {
                 mstore(0, mul(2, x))
                 return(0, 32)
             }
-            mstore(0, 0)
-            return(0, 32)
+            return(0x60, 32) // 0x60 - 0x7f (32 bytes): zero slot
         }
     }
 }
