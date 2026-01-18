@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 contract ReadFromFixedArray {
-    uint256[5] readMe;
+    uint256[5] readMe; // 0 -> length , 1 -> el1, 2 ->
 
     function setValue(uint256[5] calldata x) external {
         readMe = x;
@@ -15,6 +15,10 @@ contract ReadFromFixedArray {
             // and return it
             // Assume `index` is <= to the length of readMe
             // Hint: https://www.rareskills.io/post/solidity-dynamic
+
+            // solution
+            mstore(0x00, sload(index))
+            return(0, 32)
         }
     }
 }

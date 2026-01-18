@@ -14,6 +14,10 @@ contract ReadFromStorage {
             // read the value in the storage variable `readMe`
             // and return it
             // Hint: use sload opcode
+
+            // solution
+            mstore(0x00, sload(0))
+            return(0, 32)
         }
     }
 }
